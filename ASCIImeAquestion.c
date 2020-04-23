@@ -1,20 +1,26 @@
 #include <stdio.h>
+#include <string.h>
+#include <stdlib.h>
 
 int main(){
+	system("color e2"); //change color of font and terminal
 	
-	//declare character as a char
-	char character;
+	char word[] = "CyberSurfer";		//declare a character array
 	
-	//ask user to enter a character
-	printf("Please enter a character: ");
-	scanf("%c", &character); //%c is to print a char
+	printf("Please enter a word for translation: ");
 	
-	printf("\n\nYou entered: %c", character);
-
-	//%d prints the int (ASCII) value of a character
-	printf("\nASCII is: %d", character); 
+	scanf("%[^\n]%*c", &word);		//scan for input using the modifiers to allow you to enter spaces as well
+	printf("\n\n");
 	
-	printf("\n\n");   	// "\n" is the newline escape character
-	return 0;			//exit code is success 
-
+	int x = strlen(word);			//declare x as a variable to measure the length of the entered word
+	int i;					//declare i
+	
+    //enter a loop to print out the ASCII value for each character in the character array
+    for (i=0; i<=x-1; i++)
+    {
+        printf("%d : ", word[i]);
+    }
+	printf("NULL");				//optional, print NULL after the last colon
+	printf("\n\n");	
+	return 0;				//exit successfully
 }
