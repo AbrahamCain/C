@@ -3,7 +3,7 @@
 #include <stdlib.h>
 
 int main(){
-	system("color e2"); //change color of font and terminal
+	system("color e2");			//change color of font and terminal
 	
 	char word[] = "CyberSurfer";		//declare a character array
 	
